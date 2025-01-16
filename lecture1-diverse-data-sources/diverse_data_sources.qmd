@@ -1,11 +1,11 @@
 ---
-title: "Diverse Data Sources"
+title: "<span style='color: white'>Diverse Data Sources</span>"
 format: 
   revealjs:
     theme: [default, diverse_data_sources.scss]
 slide-number: true
 title-slide-attributes:
-  data-background-image: 'graphics/transition_slides/lilzidesigns.jpg' 
+  data-background-image: 'https://github.com/ID529/lectures/blob/main/graphics/transition_slides/lilzidesigns.jpg?raw=true' 
   data-background-color: 'black' 
   data-background-opacity: '30%'
 ---
@@ -360,7 +360,7 @@ in those situations, the `tabulizer` package may help you out.  the syntax
 is fairly straightforward, but do be warned that automated solutions like these
 can be prone to typos and formatting glitches.
 
-<img src="https://camo.githubusercontent.com/5f87506feacb2a8cd7a3add4c422965e3854bd173634d02b5dd6cf204f6d0f19/68747470733a2f2f692e696d6775722e636f6d2f55535479516c372e676966" alt="screen recording of tabulizer package digitizing some pdf tables">
+<img src="https://i.imgur.com/USTyQl7.gif" alt="screen recording of tabulizer package digitizing some pdf tables">
 
 ## extracting text from images {.xxsmall}
 
@@ -435,7 +435,7 @@ showing the datapasta workflow where you can copy and paste tables from HTML int
 i would say that you shouldn't use `datapasta` as a crutch, but rather that it
 can facilitate some of your prototyping and exploratory analysis.
 
-# takeaways {.small background-image="graphics/transition_slides/lilzidesigns.jpg" background-color='black' background-opacity='40%'}
+# takeaways {.small background-image="https://github.com/ID529/lectures/blob/main/graphics/transition_slides/lilzidesigns.jpg?raw=true" background-color='black' background-opacity='40%'}
 
   - the web is full of data you can use!
   - APIs and API wrappers in R exist to help you make use of it
