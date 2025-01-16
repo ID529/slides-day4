@@ -33,7 +33,7 @@ Originally by Amanda Hernandez
 
 <br>
 
-Thursday, January 11<sup>th</sup>, 2024
+Thursday, January 16<sup>th</sup>, 2025
 
 ## Best practices for getting help in R {.smaller}
 
