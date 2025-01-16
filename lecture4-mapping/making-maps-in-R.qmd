@@ -1,20 +1,18 @@
 ---
-title: "Mapping in R"
+title: "<span style='color: white'>Mapping in R</span>"
 format:
   revealjs:
     theme: [default, mapping.scss]
 slide-number: true
 title-slide-attributes:
-  data-background-image: "graphics/transition_slides/annie-spratt-2.jpg"
+  data-background-image: "https://github.com/ID529/lectures/blob/main/graphics/transition_slides/annie-spratt-2.jpg?raw=true"
   data-background-opacity: "60%"
   data-background-color: "black"
-revealjs-plugins:
-  - pointer
 execute: 
   echo: true
 ---
 
-## morals {data-background-image="graphics/transition_slides/annie-spratt-2.jpg" data-background-opacity="60%" data-background-color="black"}
+## morals {data-background-image="https://github.com/ID529/lectures/blob/main/graphics/transition_slides/annie-spratt-2.jpg?raw=true" data-background-opacity="60%" data-background-color="black"}
 
 :::{.fragment}
 <span style="color: white;">Map making — the art of cartography — is an ancient skill that involves communication, intuition, and an element of creativity. —Robin Lovelace, Jakub Nowosad, Jannes Muenchow, <u>[*Geocomputation with R*](https://geocompr.robinlovelace.net/adv-map.html)</u></span><br><br>
@@ -24,7 +22,7 @@ execute:
 <span style="color: white;">Without Geography, You're Nowhere</span>
 :::
 
-# getting data {data-background-image="graphics/transition_slides/annie-spratt-2.jpg" data-background-opacity="60%" data-background-color="black"}
+# getting data {data-background-image="https://github.com/ID529/lectures/blob/main/graphics/transition_slides/annie-spratt-2.jpg?raw=true" data-background-opacity="60%" data-background-color="black"}
 
 ## getting your data {.xsmall}
 
@@ -214,7 +212,7 @@ topography_raster <- rast(system.file("raster/srtm.tif", package = "spDataLarge"
 plot(topography_raster)
 ```
 
-## takeaways {.small data-background-image="graphics/transition_slides/annie-spratt-2.jpg" data-background-opacity="60%" data-background-color="black"}
+## takeaways {.small data-background-image="https://github.com/ID529/lectures/blob/main/graphics/transition_slides/annie-spratt-2.jpg?raw=true" data-background-opacity="60%" data-background-color="black"}
 
   * working with spatial data is something you can do in R
   * more complicated geospatial operations are possible, but more advanced and outside the scope of this course 
