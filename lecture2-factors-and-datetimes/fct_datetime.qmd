@@ -30,23 +30,23 @@ hobo_g2 <- read_csv("data/hobo_g2.csv",
 
 ID 529: Data Management and Analytic Workflows in R
 
-Amanda Hernandez
+Jarvis Chen
 
 <br>
-
+thanks to Amanda Hernandez for the original version of this presentation!
 <hr>
 
 <br>
 
-Thursday, January 11<sup>th</sup>, 2024
+Thursday, January 16<sup>th</sup>, 2025
 
-11 Jan 2024
+16 Jan 2025
 
-01-11-24
+01-16-25
 
-2024-01-11
+2025-01-16
 
-as_date(43840, origin = "1904-01-01")
+as_date(44211, origin = "1904-01-01")
 
 ## Follow along 
 
@@ -71,30 +71,6 @@ date-times in data analysis
 
     -   `lubridate::` for handling date-times
     
-## Amanda Hernandez (she/her) {.smaller}
-
-:::: {.columns}
-::: {.column width="30%"}
-<img src="images/AmandaHernandez.jpg" alt="Amanda's pic">
-
-<br> [github.com/amandabhernandez](https://github.com/amandabhernandez) <br>
-
-:::
-
-::: {.column width="10%"}
-<br>
-:::
-
-
-::: {.column width="60%"}
-hi there! I recently completed an MS in Environmental Health. I'm currently working in the public sector as a Presidential Management Fellow. 
-
-My master's work was at the intersection of environmental geochemistry + public health, focused on addressing environmental health disparities through community-based participatory research and evidence-based decision-making.<br><br>
-
-I’m a self-taught R user, Shiny enthusiast, and advocate for coding in light mode.
-
-:::
-::::
 
 # Factors
 
@@ -1026,17 +1002,17 @@ the date, but we want R to transform it into a date-time object: <br>
 
 ```{r}
 #| output-location: column-fragment
-ymd("2024-01-11")
+ymd("2025-01-16")
 ```
 
 ```{r}
 #| output-location: column-fragment
-ymd_hms("2024-01-11 13:30:00")
+ymd_hms("2025-01-16 13:30:00")
 ```
 
 ```{r}
 #| output-location: column-fragment
-ymd_hms("2024-01-11 13:30:00", tz = "EST")
+ymd_hms("2025-01-16 13:30:00", tz = "EST")
 ```
 :::
 
@@ -1132,7 +1108,7 @@ Topics covered:
 
 ```{r}
 # how long does this class meet for each day? 
-class_length <- ymd_hms("2024-01-11 17:30:00") -  ymd_hms("2024-01-11 13:30:00")
+class_length <- ymd_hms("2025-01-13 17:30:00") -  ymd_hms("2025-01-13 13:30:00")
 class_length
 ```
 
@@ -1155,8 +1131,8 @@ together? 😊 <br>
 ::: fragment
 ```{r}
 # how many days does this class meet for? 
-class_dates <- c(seq(ymd('2024-01-08'),ymd('2024-01-12'), by = 1),
-                 seq(ymd('2024-01-16'),ymd('2024-01-19'), by = 1))
+class_dates <- c(seq(ymd('2025-01-13'),ymd('2025-01-17'), by = 1),
+                 seq(ymd('2025-01-21'),ymd('2025-01-24'), by = 1))
 class_dates
 
 
@@ -1238,8 +1214,8 @@ class_meeting_times$start_time[1] + hours(4)
 you input. <br>
 
 ```{r}
-interval(start = today(), end = ymd("2024-01-19"))
-today() %--% ymd("2024-01-19")
+interval(start = today(), end = ymd("2025-01-24"))
+today() %--% ymd("2025-01-24")
 
 ```
 
@@ -1254,8 +1230,8 @@ class_date_interval <- interval(start = min(ymd(class_dates)),
                                 end = max(ymd(class_dates)))
 
 #check whether a date happens during class
-ymd("2024-01-22") %within% class_date_interval
-ymd("2024-01-11") %within% class_date_interval
+ymd("2025-01-10") %within% class_date_interval
+ymd("2025-01-16") %within% class_date_interval
 ```
 :::
 
@@ -1284,7 +1260,7 @@ class_meeting_times$start_time[1] + dhours(4)
 
 # only specifying one time zone leaves you vulnerable to time changes between collaborators/devices!
 interval(start = now(), 
-         end = ymd_hms("2024-01-11 17:30:00", 
+         end = ymd_hms("2025-01-16 17:30:00", 
                        tz = "EST"))
 ```
 
@@ -1309,7 +1285,7 @@ leap_year(2024)
 
 ymd("2024-01-12") - dyears(1)
 
-ymd("2023-02-28") + ddays(1)
+ymd("2025-02-28") + ddays(1)
 
 ymd("2024-02-28") + ddays(1)
 
@@ -1335,10 +1311,10 @@ ymd("2024-02-28") + ddays(1)
 
 ```{r}
 dst(today())
-dst("2024-03-10 13:30:00")
+dst("2025-03-10 13:30:00")
 
-as_datetime(ymd_hms("2024-03-09 13:30:00")) + dhours(24)
-ymd_hms("2024-03-09 13:30:00") + days(1)
+as_datetime(ymd_hms("2025-03-08 13:30:00", tz = "America/New_York")) + dhours(24)
+ymd_hms("2025-03-08 13:30:00", tz = "America/New_York") + days(1)
 
 
 ```
@@ -1361,9 +1337,9 @@ The `parse_date()` function from the `parsedate::` package is useful for
 converting a list of messy dates into a standard format!
 
 ```{r}
-parsedate::parse_date(c("11 January 2024",
-                        "01/11/2024",
-                        "01/11/24"))
+parsedate::parse_date(c("16 January 2025",
+                        "01/16/2025",
+                        "01/16/25"))
 
 ```
 :::
@@ -1373,7 +1349,7 @@ parsedate::parse_date(c("11 January 2024",
 
 ::: columns
 ::: {.column width="70%"}
-On the first day of ID529 in January 2023, I set up an instrument to log indoor temperature, relative
+On the first day of ID529 in January 2023, Amanda set up an instrument to log indoor temperature, relative
 humidity, and CO$_2$ in G2. <br> <br> The logger (called a HOBO) was set
 to collect data at 1-second intervals \~15 minutes before class began
 and \~15 minutes after class ended. <br> <br> The data were cleaned and
