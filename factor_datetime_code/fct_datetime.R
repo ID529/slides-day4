@@ -225,11 +225,11 @@ now()
 as_date(now())
 
 
-ymd("2023-01-12")
+ymd("2025-01-16")
 
-ymd_hms("2023-01-12 13:30:00")
+ymd_hms("2025-01-16 13:30:00")
 
-ymd_hms("2023-01-12 13:30:00", tz = "EST")
+ymd_hms("2025-01-16 13:30:00", tz = "EST")
 
 
 ## Time spans
@@ -247,15 +247,15 @@ interval(start = today(),
 
 ## Durations: Subtraction
 
-class_length <- ymd_hms("2023-01-12 17:30:00") -  ymd_hms("2023-01-12 13:30:00")
+class_length <- ymd_hms("2025-01-13 17:30:00") -  ymd_hms("2025-01-13 13:30:00")
 class_length
 as.duration(class_length)
 
 ## Durations: Multiplication
 
 # how many days does this class meet for? 
-class_dates <- c(seq(ymd('2023-01-09'),ymd('2023-01-13'), by = 1),
-                 seq(ymd('2023-01-17'),ymd('2023-01-20'), by = 1))
+class_dates <- c(seq(ymd('2025-01-13'),ymd('2023-01-17'), by = 1),
+                 seq(ymd('2025-01-21'),ymd('2023-01-24'), by = 1))
 class_dates
 
 class_length*length(class_dates)
@@ -282,15 +282,15 @@ as.duration(sum(as.duration(class_meeting_times$end_time-class_meeting_times$sta
 ## Caution: Working with intervals, durations, and periods {.smaller}
 class_meeting_times$start_time[1] + hours(4)
 
-interval(start = today(), end = ymd("2023-01-20"))
-today() %--% ymd("2023-01-20")
+interval(start = today(), end = ymd("2025-01-24"))
+today() %--% ymd("2025-01-24")
 
 class_date_interval <- interval(start = min(ymd(class_dates)), 
                                 end = max(ymd(class_dates)))
 
 #check whether a date happens during class
-ymd("2023-01-22") %within% class_date_interval
-ymd("2023-01-12") %within% class_date_interval
+ymd("2025-01-16") %within% class_date_interval
+ymd("2025-01-13") %within% class_date_interval
 
 
 ## Caution: Working with intervals, durations, and periods
@@ -300,31 +300,34 @@ class_meeting_times$start_time[1] + hours(4)
 class_meeting_times$start_time[1] + dhours(4)
 
 interval(start = now(), 
-         end = ymd_hms("2023-01-12 17:30:00"))
+         end = ymd_hms("2025-01-24 17:30:00"))
 
 interval(start = now(), 
-         end = ymd_hms("2023-01-12 17:30:00",
+         end = ymd_hms("2025-01-24 17:30:00",
                        tz = "EST"))
 
 
 
 ## Caution: time is a construct 
-
 leap_year(2024)
 
 ymd("2024-01-12") - dyears(1)
 
+ymd("2025-02-28") + ddays(1)
+
+ymd("2024-02-28") + ddays(1)
 
 dst(today())
-dst("2023-03-12 13:30:00")
+dst("2025-03-10 13:30:00")
 
-ymd_hms("2023-03-11 13:30:00") + ddays(1)
-ymd_hms("2023-03-11 13:30:00") + days(1)
+as_datetime(ymd_hms("2025-03-08 13:30:00", tz = "America/New_York")) + dhours(24)
+ymd_hms("2025-03-08 13:30:00", tz = "America/New_York") + days(1)
+
 
 ## hodu tip
-parsedate::parse_date(c("12 January 2023",
-                        "01/12/2023",
-                        "01/12/23"))
+parsedate::parse_date(c("16 January 2025",
+                        "01/16/2025",
+                        "01/16/25"))
 
 
 ## Example: Classroom CO2

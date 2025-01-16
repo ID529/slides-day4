@@ -8,7 +8,7 @@
 <link href="fct_datetime_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="fct_datetime_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="fct_datetime_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.5.57">
 
   <title>fct_datetime</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +41,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -69,7 +69,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -83,7 +83,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -395,15 +395,15 @@
 <section id="factors-and-date-times" class="title-slide slide level1 smaller center">
 <h1>Factors and date-times</h1>
 <p>ID 529: Data Management and Analytic Workflows in R</p>
-<p>Amanda Hernandez</p>
-<p><br></p>
+<p>Jarvis Chen</p>
+<br> thanks to Amanda Hernandez for the original version of this presentation!
 <hr>
 <p><br></p>
-<p>Thursday, January 11<sup>th</sup>, 2024</p>
-<p>11 Jan 2024</p>
-<p>01-11-24</p>
-<p>2024-01-11</p>
-<p>as_date(43840, origin = “1904-01-01”)</p>
+<p>Thursday, January 16<sup>th</sup>, 2025</p>
+<p>16 Jan 2025</p>
+<p>01-16-25</p>
+<p>2025-01-16</p>
+<p>as_date(44211, origin = “1904-01-01”)</p>
 </section>
 <section id="follow-along" class="slide level2">
 <h2>Follow along</h2>
@@ -423,21 +423,6 @@
 <li><p><code>lubridate::</code> for handling date-times</p></li>
 </ul></li>
 </ul>
-</section>
-<section id="amanda-hernandez-sheher" class="slide level2 smaller">
-<h2>Amanda Hernandez (she/her)</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/AmandaHernandez.jpg" alt="Amanda's pic"></p>
-<p><br> <a href="https://github.com/amandabhernandez">github.com/amandabhernandez</a> <br></p>
-</div><div class="column" style="width:10%;">
-<p><br></p>
-</div><div class="column" style="width:60%;">
-<p>hi there! I recently completed an MS in Environmental Health. I’m currently working in the public sector as a Presidential Management Fellow.</p>
-<p>My master’s work was at the intersection of environmental geochemistry + public health, focused on addressing environmental health disparities through community-based participatory research and evidence-based decision-making.<br><br></p>
-<p>I’m a self-taught R user, Shiny enthusiast, and advocate for coding in light mode.</p>
-</div>
-</div>
 </section></section>
 <section>
 <section id="factors" class="title-slide slide level1 center">
@@ -483,8 +468,7 @@
 <li><p>Quantile groups</p></li>
 <li><p>Months/Days of the week</p></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="working-with-factors" class="slide level2 smaller">
 <h2>Working with factors</h2>
@@ -505,8 +489,7 @@
 [7] "sex"               "year"             </code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="working-with-factors-1" class="slide level2 smaller">
@@ -548,8 +531,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 Levels: Adelie Chinstrap Gentoo</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="factor-rules" class="slide level2 smaller">
 <h2>Factor rules</h2>
@@ -666,8 +648,7 @@ Levels: Adelie Chinstrap Gentoo</code></pre>
 </div>
 </div><div class="column">
 <p>If you’re doing a lot of different analyses and visualization, you may want to change the factor order quite often. <br> <br> Consider using these functions locally within your code so that you’re not actually changing the underlying dataset and future analyses.</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="factor-rules-missingness" class="slide level2 smaller">
 <h2>Factor rules: Missingness</h2>
@@ -765,8 +746,7 @@ Levels: Adelie Chinstrap Gentoo</code></pre>
    Adelie Chinstrap    Gentoo 
       152         0         0 </code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <p><br></p>
 <div class="cell columns column-output-location">
 <div class="column">
@@ -777,8 +757,7 @@ Levels: Adelie Chinstrap Gentoo</code></pre>
 Adelie 
    152 </code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="empty-groups-nas-in-factors-2" class="slide level2 smaller">
@@ -822,8 +801,7 @@ Adelie
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="empty-groups-nas-in-factors-3" class="slide level2 smaller">
 <h2>Empty groups + NAs in factors</h2>
@@ -1032,8 +1010,7 @@ Levels: high BP normal BP low BP</code></pre>
 <p><img data-src="images/forcats_logo.png" class="quarto-figure quarto-figure-center" style="height:40.0%" alt="forcats pacakge hex logo"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="useful-forcats-functions" class="slide level2 smaller">
 <h2>Useful <code>forcats::</code> functions</h2>
@@ -1054,8 +1031,7 @@ Levels: high BP normal BP low BP</code></pre>
 <p><img data-src="images/forcats_logo.png" class="quarto-figure quarto-figure-center" style="height:40.0%" alt="forcats pacakge hex logo"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 
 <aside><div>
 <p>These functions can be temperamental! If it’s not working as you expect, you can always go back to manually setting the order with <code>factor()</code></p>
@@ -1114,8 +1090,7 @@ Levels: high BP normal BP low BP</code></pre>
 <span id="cb42-4"><a href=""></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="caution-typos" class="slide level2 smaller">
 <h2>⚠️ Caution: typos</h2>
@@ -1218,11 +1193,10 @@ average penguins     big penguins   small penguins
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-16 10:15:00 EST"</code></pre>
+<pre><code>[1] "2025-01-16 12:07:24 EST"</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="working-with-dates-6" class="slide level2 smaller">
 <h2>Working with dates</h2>
@@ -1258,8 +1232,7 @@ average penguins     big penguins   small penguins
 <figcaption>Artwork by @allison_horst</figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="lubridate-basics" class="slide level2 smaller">
 <h2><code>lubridate::</code> basics</h2>
@@ -1274,8 +1247,7 @@ average penguins     big penguins   small penguins
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2025</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1285,8 +1257,7 @@ average penguins     big penguins   small penguins
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1297,8 +1268,7 @@ average penguins     big penguins   small penguins
 <pre><code>[1] Jan
 12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1308,8 +1278,7 @@ average penguins     big penguins   small penguins
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1319,8 +1288,7 @@ average penguins     big penguins   small penguins
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1330,8 +1298,7 @@ average penguins     big penguins   small penguins
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1342,8 +1309,7 @@ average penguins     big penguins   small penguins
 <pre><code>[1] Thu
 Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1351,10 +1317,9 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href=""></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 10</code></pre>
+<pre><code>[1] 12</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1362,10 +1327,9 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href=""></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 15</code></pre>
+<pre><code>[1] 7</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1373,20 +1337,17 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href=""></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5073371</code></pre>
+<pre><code>[1] 24.5105</code></pre>
 </div>
+</div></div>
 </div>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 <section id="lubridate-basics-1" class="slide level2 smaller">
 <h2><code>lubridate::</code> basics</h2>
 <p><img data-src="images/lubridate_hex.png" class="absolute" style="top: 1px; right: 0px; height: 20%; "></p>
 <div class="column" style="width:85%;">
 <p>The function <code>now()</code> returns a date-time object, while <code>today()</code> returns just a date. <code>lubridate::</code> also has functions that allow us to force the date into a date-time and the date-time into a date:</p>
-</div>
-<div class="columns">
+</div><div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href=""></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1406,7 +1367,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href=""></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-16 10:15:00 EST"</code></pre>
+<pre><code>[1] "2025-01-16 12:07:24 EST"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1417,8 +1378,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <pre><code>[1] "2025-01-16"</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="lubridate-basics-2" class="slide level2 smaller">
 <h2><code>lubridate::</code> basics</h2>
@@ -1427,34 +1387,29 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <p>With <code>lubridate::</code>, we can also work with dates as a whole, rather than their individual components. Let’s say we have a character string with the date, but we want R to transform it into a date-time object: <br></p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2024-01-11"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2025-01-16"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-11"</code></pre>
+<pre><code>[1] "2025-01-16"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2024-01-11 13:30:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2025-01-16 13:30:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-11 13:30:00 UTC"</code></pre>
+<pre><code>[1] "2025-01-16 13:30:00 UTC"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2024-01-11 13:30:00"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2025-01-16 13:30:00"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-11 13:30:00 EST"</code></pre>
+<pre><code>[1] "2025-01-16 13:30:00 EST"</code></pre>
 </div>
-</div>
-</div>
-</div>
-
-<aside><div>
+</div></div>
+</div><aside><div>
 <p><code>lubridate::</code> also allows you to move around the order of <code>ymd()</code>, so you can also run <code>dmy()</code> or <code>mdy()</code> – however, the order is telling R how to identify the different components of your date, rather than what you want it to be.</p>
 </div></aside></section>
 <section id="time-spans" class="slide level2 smaller">
@@ -1508,8 +1463,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <pre><code>[1] 2025-01-16 UTC--2025-01-24 UTC</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="time-spans-2" class="slide level2 smaller">
 <h2>Time spans</h2>
@@ -1535,7 +1489,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <p><br> We can use arithmetic operators with durations: <br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href=""></a><span class="co"># how long does this class meet for each day? </span></span>
-<span id="cb91-2"><a href=""></a>class_length <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2024-01-11 17:30:00"</span>) <span class="sc">-</span>  <span class="fu">ymd_hms</span>(<span class="st">"2024-01-11 13:30:00"</span>)</span>
+<span id="cb91-2"><a href=""></a>class_length <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2025-01-13 17:30:00"</span>) <span class="sc">-</span>  <span class="fu">ymd_hms</span>(<span class="st">"2025-01-13 13:30:00"</span>)</span>
 <span id="cb91-3"><a href=""></a>class_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Time difference of 4 hours</code></pre>
@@ -1558,12 +1512,12 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href=""></a><span class="co"># how many days does this class meet for? </span></span>
-<span id="cb95-2"><a href=""></a>class_dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">'2024-01-08'</span>),<span class="fu">ymd</span>(<span class="st">'2024-01-12'</span>), <span class="at">by =</span> <span class="dv">1</span>),</span>
-<span id="cb95-3"><a href=""></a>                 <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">'2024-01-16'</span>),<span class="fu">ymd</span>(<span class="st">'2024-01-19'</span>), <span class="at">by =</span> <span class="dv">1</span>))</span>
+<span id="cb95-2"><a href=""></a>class_dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">'2025-01-13'</span>),<span class="fu">ymd</span>(<span class="st">'2025-01-17'</span>), <span class="at">by =</span> <span class="dv">1</span>),</span>
+<span id="cb95-3"><a href=""></a>                 <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">'2025-01-21'</span>),<span class="fu">ymd</span>(<span class="st">'2025-01-24'</span>), <span class="at">by =</span> <span class="dv">1</span>))</span>
 <span id="cb95-4"><a href=""></a>class_dates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-08" "2024-01-09" "2024-01-10" "2024-01-11" "2024-01-12"
-[6] "2024-01-16" "2024-01-17" "2024-01-18" "2024-01-19"</code></pre>
+<pre><code>[1] "2025-01-13" "2025-01-14" "2025-01-15" "2025-01-16" "2025-01-17"
+[6] "2025-01-21" "2025-01-22" "2025-01-23" "2025-01-24"</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -1574,8 +1528,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Time difference of 36 hours</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href=""></a><span class="fu">as.duration</span>(class_length)<span class="sc">*</span><span class="fu">length</span>(class_dates)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1583,8 +1536,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "129600s (~1.5 days)"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="durations-addition" class="slide level2 smaller">
@@ -1608,8 +1560,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href=""></a><span class="fu">class</span>(class_meeting_times<span class="sc">$</span>start_time)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1619,8 +1570,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 attr(,"package")
 [1] "lubridate"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href=""></a><span class="fu">class</span>(class_meeting_times<span class="sc">$</span>class_time_int)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1630,8 +1580,7 @@ attr(,"package")
 attr(,"package")
 [1] "lubridate"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <p><br></p>
 <div class="fragment">
 <div class="cell columns column-output-location">
@@ -1641,8 +1590,7 @@ attr(,"package")
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "129600s (~1.5 days)"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="periods" class="slide level2 smaller">
@@ -1659,13 +1607,13 @@ attr(,"package")
 <h2>Intervals</h2>
 <p><br> Intervals can be created with the <code>interval()</code> function or with <code>%--%</code>. By default, intervals will be created in the date-time format you input. <br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href=""></a><span class="fu">interval</span>(<span class="at">start =</span> <span class="fu">today</span>(), <span class="at">end =</span> <span class="fu">ymd</span>(<span class="st">"2024-01-19"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href=""></a><span class="fu">interval</span>(<span class="at">start =</span> <span class="fu">today</span>(), <span class="at">end =</span> <span class="fu">ymd</span>(<span class="st">"2025-01-24"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2025-01-16 UTC--2024-01-19 UTC</code></pre>
+<pre><code>[1] 2025-01-16 UTC--2025-01-24 UTC</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href=""></a><span class="fu">today</span>() <span class="sc">%--%</span> <span class="fu">ymd</span>(<span class="st">"2024-01-19"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href=""></a><span class="fu">today</span>() <span class="sc">%--%</span> <span class="fu">ymd</span>(<span class="st">"2025-01-24"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2025-01-16 UTC--2024-01-19 UTC</code></pre>
+<pre><code>[1] 2025-01-16 UTC--2025-01-24 UTC</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -1676,11 +1624,11 @@ attr(,"package")
 <span id="cb116-2"><a href=""></a>                                <span class="at">end =</span> <span class="fu">max</span>(<span class="fu">ymd</span>(class_dates)))</span>
 <span id="cb116-3"><a href=""></a></span>
 <span id="cb116-4"><a href=""></a><span class="co">#check whether a date happens during class</span></span>
-<span id="cb116-5"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2024-01-22"</span>) <span class="sc">%within%</span> class_date_interval</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb116-5"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2025-01-10"</span>) <span class="sc">%within%</span> class_date_interval</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2024-01-11"</span>) <span class="sc">%within%</span> class_date_interval</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2025-01-16"</span>) <span class="sc">%within%</span> class_date_interval</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -1697,8 +1645,7 @@ attr(,"package")
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "17H 30M 0S"</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href=""></a>class_meeting_times<span class="sc">$</span>start_time[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">dhours</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1706,21 +1653,19 @@ attr(,"package")
 <div class="cell-output cell-output-error">
 <pre><code>Error: Incompatible classes: &lt;Period&gt; + &lt;Duration&gt;</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 <p><br></p>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href=""></a><span class="co"># only specifying one time zone leaves you vulnerable to time changes between collaborators/devices!</span></span>
 <span id="cb124-2"><a href=""></a><span class="fu">interval</span>(<span class="at">start =</span> <span class="fu">now</span>(), </span>
-<span id="cb124-3"><a href=""></a>         <span class="at">end =</span> <span class="fu">ymd_hms</span>(<span class="st">"2024-01-11 17:30:00"</span>, </span>
+<span id="cb124-3"><a href=""></a>         <span class="at">end =</span> <span class="fu">ymd_hms</span>(<span class="st">"2025-01-16 17:30:00"</span>, </span>
 <span id="cb124-4"><a href=""></a>                       <span class="at">tz =</span> <span class="st">"EST"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2025-01-16 10:15:00 EST--2024-01-11 17:30:00 EST</code></pre>
+<pre><code>[1] 2025-01-16 12:07:24 EST--2025-01-16 17:30:00 EST</code></pre>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="caution-time-is-a-construct" class="slide level2 smaller">
 <h2>⚠️ Caution: time is a construct 🫠</h2>
@@ -1740,17 +1685,16 @@ attr(,"package")
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2023-01-11 18:00:00 UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2023-02-28"</span>) <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2025-02-28"</span>) <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-03-01"</code></pre>
+<pre><code>[1] "2025-03-01"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href=""></a><span class="fu">ymd</span>(<span class="st">"2024-02-28"</span>) <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2024-02-29"</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1768,21 +1712,20 @@ attr(,"package")
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href=""></a><span class="fu">dst</span>(<span class="st">"2024-03-10 13:30:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href=""></a><span class="fu">dst</span>(<span class="st">"2025-03-10 13:30:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href=""></a><span class="fu">as_datetime</span>(<span class="fu">ymd_hms</span>(<span class="st">"2024-03-09 13:30:00"</span>)) <span class="sc">+</span> <span class="fu">dhours</span>(<span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href=""></a><span class="fu">as_datetime</span>(<span class="fu">ymd_hms</span>(<span class="st">"2025-03-08 13:30:00"</span>, <span class="at">tz =</span> <span class="st">"America/New_York"</span>)) <span class="sc">+</span> <span class="fu">dhours</span>(<span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-03-10 13:30:00 UTC"</code></pre>
+<pre><code>[1] "2025-03-09 14:30:00 EDT"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2024-03-09 13:30:00"</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href=""></a><span class="fu">ymd_hms</span>(<span class="st">"2025-03-08 13:30:00"</span>, <span class="at">tz =</span> <span class="st">"America/New_York"</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-03-10 13:30:00 UTC"</code></pre>
+<pre><code>[1] "2025-03-09 13:30:00 EDT"</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-2" class="slide level2 smaller">
@@ -1798,21 +1741,20 @@ attr(,"package")
 </div><div class="column">
 <p>The <code>parse_date()</code> function from the <code>parsedate::</code> package is useful for converting a list of messy dates into a standard format!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href=""></a>parsedate<span class="sc">::</span><span class="fu">parse_date</span>(<span class="fu">c</span>(<span class="st">"11 January 2024"</span>,</span>
-<span id="cb142-2"><a href=""></a>                        <span class="st">"01/11/2024"</span>,</span>
-<span id="cb142-3"><a href=""></a>                        <span class="st">"01/11/24"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href=""></a>parsedate<span class="sc">::</span><span class="fu">parse_date</span>(<span class="fu">c</span>(<span class="st">"16 January 2025"</span>,</span>
+<span id="cb142-2"><a href=""></a>                        <span class="st">"01/16/2025"</span>,</span>
+<span id="cb142-3"><a href=""></a>                        <span class="st">"01/16/25"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-11 UTC" "2024-01-11 UTC" "2024-01-11 UTC"</code></pre>
+<pre><code>[1] "2025-01-16 UTC" "2025-01-16 UTC" "2025-01-16 UTC"</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="example-classroom-co_2" class="slide level2 smaller">
 <h2>Example: Classroom CO<span class="math inline">\(_2\)</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p>On the first day of ID529 in January 2023, I set up an instrument to log indoor temperature, relative humidity, and CO<span class="math inline">\(_2\)</span> in G2. <br> <br> The logger (called a HOBO) was set to collect data at 1-second intervals ~15 minutes before class began and ~15 minutes after class ended. <br> <br> The data were cleaned and are now “long”</p>
+<p>On the first day of ID529 in January 2023, Amanda set up an instrument to log indoor temperature, relative humidity, and CO<span class="math inline">\(_2\)</span> in G2. <br> <br> The logger (called a HOBO) was set to collect data at 1-second intervals ~15 minutes before class began and ~15 minutes after class ended. <br> <br> The data were cleaned and are now “long”</p>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href=""></a><span class="fu">glimpse</span>(hobo_g2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1831,8 +1773,7 @@ $ result    &lt;dbl&gt; 71.834, 34.128, 71.834, 33.995, 71.834, 33.929, 71.834, 
 <p><img data-src="images/jarvisteaching.jpeg" class="quarto-figure quarto-figure-center" alt="A picture of a HOBO CO2 logger set up in G2 while Jarvis makes some really great points at the podium" height="400"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 
 <aside><div>
 <p>You can find the raw data and the cleaning code in the data folder for this lecture</p>
@@ -2334,18 +2275,7 @@ FALSE  TRUE
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2377,7 +2307,47 @@ FALSE  TRUE
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2414,7 +2384,11 @@ FALSE  TRUE
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
